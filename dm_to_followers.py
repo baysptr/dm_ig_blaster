@@ -13,6 +13,6 @@ banDelay = 86400 / messageTosend
 bot = Bot(save_logfile=False)
 bot.login(username=set_user.username, password=set_user.password)
 
-for follower in tqdm(bot.followers):
+for follower in tqdm(bot.following):
 	bot.send_message("Judul\n\nini berita ku", follower)
 	

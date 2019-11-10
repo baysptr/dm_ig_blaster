@@ -13,10 +13,12 @@ banDelay = 86400 / messageTosend
 parser = argparse.ArgumentParser(add_help=True)
 parser.add_argument("-u", type=str, help="username")
 parser.add_argument("-p", type=str, help="password")
+parser.add_argument("-m", '--message', type=str, help="message")
+parser.add_argument("-t", '--target', type=str, help="target")
 args = parser.parse_args()
 
 bot = Bot(save_logfile=False)
-bot.login(username=set_user.username, password=set_user.password)
+bot.login(username=args.u, password=args.p)
 
-bot.send_message(args.u, args.p)
-bot.logout(username=set_user.username, password=set_user.password)
+bot.send_message(args.dm, args.target)
+bot.logout(username=args.u, password=args.p)
