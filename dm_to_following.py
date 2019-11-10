@@ -18,7 +18,7 @@ args = parser.parse_args()
 bot = Bot(save_logfile=False)
 bot.login(username=args.u, password=args.p)
 
-for follower in tqdm(bot.followers):
-	bot.send_message(args.d, follower)
-	
-bot.logout(username=args.u, password=args.p)
+for following in tqdm(bot.following):
+	bot.send_message(args.d, following)
+
+bot.logout(username=args.u, password=args.p)	

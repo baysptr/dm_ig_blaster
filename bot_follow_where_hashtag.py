@@ -1,9 +1,3 @@
-"""
-    instabot example
-
-    Send photo to user
-"""
-
 import argparse
 import os
 import sys
@@ -14,12 +8,14 @@ from instabot import Bot  # noqa: E402
 parser = argparse.ArgumentParser(add_help=True)
 parser.add_argument("-u", type=str, help="username")
 parser.add_argument("-p", type=str, help="password")
-parser.add_argument("-t", type=str, help="target user")
-parser.add_argument("-d", type=str, help="direct message")
+parser.add_argument("hashtags", type=str, nargs="+", help="hashtags")
 args = parser.parse_args()
 
-bot = Bot(save_logfile=False)
+bot = Bot()
 bot.login(username=args.u, password=args.p)
 
-bot.send_message(args.d, args.t)
+for hashtag in args.hashtags:
+    users = bot.get_hashtag_users(hashtag)
+    followed = bot.follow_users(users)
+
 bot.logout(username=args.u, password=args.p)

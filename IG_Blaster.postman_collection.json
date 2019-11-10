@@ -1,0 +1,198 @@
+{
+	"info": {
+		"_postman_id": "556efc05-68fe-4c13-8bce-5cc7d27e0f54",
+		"name": "IG_Blaster",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Direct message to only user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "baysptr",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "bayusaputra11",
+							"type": "text"
+						},
+						{
+							"key": "user_target",
+							"value": "fadelnuariko",
+							"type": "text"
+						},
+						{
+							"key": "dm",
+							"value": "test",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:5000/dm_to_user",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"dm_to_user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Follow user by hashtag posting",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "undefined_plus",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "bayu2505",
+							"type": "text"
+						},
+						{
+							"key": "hashtag",
+							"value": "#papua",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:5000/follow_by_hashtag",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"follow_by_hashtag"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Direct message to following",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "undefined_plus",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "bayu2505",
+							"type": "text"
+						},
+						{
+							"key": "message",
+							"value": "test ",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:5000/dm_by_following",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"dm_by_following"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Direct message to followers",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "undefined_plus",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "bayu2505",
+							"type": "text"
+						},
+						{
+							"key": "message",
+							"value": "test ",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:5000/dm_by_followers",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"dm_by_followers"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
