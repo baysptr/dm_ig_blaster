@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "556efc05-68fe-4c13-8bce-5cc7d27e0f54",
+		"_postman_id": "71c8a6b6-7899-4a49-a7f0-102300fd9567",
 		"name": "IG_Blaster",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -22,22 +22,22 @@
 					"urlencoded": [
 						{
 							"key": "username",
-							"value": "baysptr",
+							"value": "undefined_plus",
 							"type": "text"
 						},
 						{
 							"key": "password",
-							"value": "bayusaputra11",
+							"value": "bayu2505",
 							"type": "text"
 						},
 						{
 							"key": "user_target",
-							"value": "fadelnuariko",
+							"value": "fadelnuariko,baysptr,_damaraa,_baguspb",
 							"type": "text"
 						},
 						{
 							"key": "dm",
-							"value": "test",
+							"value": "test broadcast ig",
 							"type": "text"
 						}
 					]
@@ -188,6 +188,62 @@
 					"port": "5000",
 					"path": [
 						"dm_by_followers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Check info account",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "undefined_plus",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "bayu2505",
+							"type": "text"
+						},
+						{
+							"key": "user_target",
+							"value": "_damaraa",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "dm",
+							"value": "test",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/check_info",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"check_info"
 					]
 				}
 			},

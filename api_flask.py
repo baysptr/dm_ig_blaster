@@ -1,9 +1,10 @@
 import os
 import sys
 import time
+import subprocess
+
 from flask import Flask
 from flask import request
-from flask import json
 
 messageTosend = 100
 banDelay = 86400 / messageTosend
@@ -52,6 +53,16 @@ def dm_by_followers():
 	os.system('python3 dm_to_followers.py -u '+_username+' -p '+_password+' -d '+repr(_message))
 
 	return 'success'
+
+@app.route('/check_info', methods=['post'])
+def check_info():
+	_username = request.form['username']
+	_password = request.form['password']
+
+	proc = subprocess.Popen(["python3 get_info.py -u "+_username+" -p "+_password], stdout=subprocess.PIPE, shell=True)
+	(out, err) = proc.communicate()
+
+	return(out)
 
 if __name__ == '__main__':
 	app.run(debug=False)

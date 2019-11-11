@@ -21,5 +21,9 @@ args = parser.parse_args()
 bot = Bot(save_logfile=False)
 bot.login(username=args.u, password=args.p)
 
-bot.send_message(args.d, args.t)
+users = args.t
+users = users.split(',')
+
+
+bot.send_messages(args.d, users)
 bot.logout(username=args.u, password=args.p)
